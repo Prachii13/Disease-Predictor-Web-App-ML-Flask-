@@ -1,0 +1,11 @@
+disease-predictor/
+├── app.py
+├── model.pkl
+├── templates/
+│   └── index.html
+├── static/
+│   └── style.css
+├── train_model.py
+├── disease_dataset.csv
+├── requirements.txt
+└── README.md
