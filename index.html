@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Disease Predictor</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container">
+    <h2>🧬 Disease Predictor</h2>
+    <form method="POST">
+        <label>Select Symptoms:</label><br>
+        <select name="symptoms" multiple size="10">
+            {% for symptom in symptoms %}
+                <option value="{{ symptom }}">{{ symptom.replace('_',' ').title() }}</option>
+            {% endfor %}
+        </select><br><br>
+        <button type="submit">Predict Disease</button>
+    </form>
+
+    {% if prediction %}
+        <h3>🩺 Likely Disease: <u>{{ prediction }}</u></h3>
+    {% endif %}
+</div>
+</body>
+</html>
